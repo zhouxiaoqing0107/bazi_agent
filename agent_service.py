@@ -25,7 +25,6 @@ from pathlib import Path
 from typing import Literal
 from langfuse.types import MaskOtelSpansResult, OtelSpanPatch
 import json
-import os
 import chromadb
 
 ## 事前资料准备
@@ -102,12 +101,12 @@ def mask_otel_spans(*, params):
 
 
 
-api_key = os.environ["DASHSCOPE_API_KEY"]
+api_key = 'sk-ws-H.PEDPEID.Dhp0.MEQCIBv7Qpqy48Tbw6LqM3Uc6H_UoC2J88AeoQLYFRiUzfGAAiABGtTQdWELfPHeQ6rdfhxzS1qLilKaQ7inov1le0ea0Q'
 
 langfuse = Langfuse(
-    public_key=os.environ["LANGFUSE_PUBLIC_KEY"],
-    secret_key=os.environ["LANGFUSE_SECRET_KEY"],
-    base_url=os.environ.get("LANGFUSE_BASE_URL", "https://us.cloud.langfuse.com"),
+    public_key="pk-lf-41ba02c0-7bfa-4751-aba3-79037ad55f04",
+    secret_key="sk-lf-916c5f2e-5284-4eb4-bcd8-53a1eb480a31",
+    base_url="https://us.cloud.langfuse.com",
     #mask_otel_spans=mask_otel_spans,
     timeout=30
 )
